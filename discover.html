@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lufthansa</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <!--NAVBAR-->
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand mr-auto" href="index.html">
+      <img src="https://www.lufthansa.com/etc/designs/dcep/lh-logo-crane-typo.svg" alt="Lufthansa Logo" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login & Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discover.html">Discover Lufthansa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checkin.html">Check-in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html"><i></i> My Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-globe"></i> CA-EN </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+  <!--Card-->
+
+  <div class="container-fluid" style="margin-top: 180px;">
+    <p style="margin-left: 30px; margin-top: 180px;"><a href="index.html" style="text-decoration: none; color: black;">Home > Offers and destinations</a></p>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="filter-sidebar">
+          <h3 style="margin-top: 50px;">Filter</h3>
+          <form>
+            <div class="form-group">
+              <label for="whereToFly">Where to fly</label>
+              <input type="text" class="form-control" id="whereToFly" placeholder="From">
+            </div>
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <select class="form-control" id="destination">
+                <option>Spain</option>
+                <option>France</option>
+                <option>Italy</option>
+                <option>Greece</option>
+                <option>Croatia</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="budget">Budget</label>
+              <select class="form-control" id="budget">
+                <option>$ 837</option>
+                <option>$ 5,380</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="month">Month</label>
+              <select class="form-control" id="month">
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+                <option>January</option>
+                <option>Febuary</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tripType">Type of trip</label>
+              <div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="roundTrip" id="roundTrip">
+                  <label class="form-check-label" for="roundTrip">
+                    Round trip
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="oneWay" id="oneWay">
+                  <label class="form-check-label" for="oneWay">
+                    One-way
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="stops">Stops</label>
+              <div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="nonstop" id="nonstop">
+                  <label class="form-check-label" for="nonstop">
+                    Nonstop only
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Activities</label>
+              <div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="beach" id="beach">
+                  <label class="form-check-label" for="beach">
+                    Beach
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="dining" id="dining">
+                  <label class="form-check-label" for="dining">
+                    Fine dining
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="golf" id="golf">
+                  <label class="form-check-label" for="golf">
+                    Golf
+                  </label>
+                </div>
+              </div>
+            </div>
+           
+          </form>
+        </div>
+      </div>
+          
+      <div class="col-md-9">
+        <h2 style="margin-top: 60px; margin-bottom: 60px;">Offers & destinations from Toronto</h2>
+        <div class="row">
+          <!-- Flight cards -->
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/bcn-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Barcelona</h5>
+                <p class="card-text">Spain</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$837</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/nce-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Nice</h5>
+                <p class="card-text">France</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$914</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/ath-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Athens</h5>
+                <p class="card-text">Greece</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$924</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/mrs-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Marseille</h5>
+                <p class="card-text">France</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$837</h5> 
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/pmo-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Palermo</h5>
+                <p class="card-text">Italy</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$914</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/rho-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Rhodes</h5>
+                <p class="card-text">Greece</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$1090</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/fue-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Fuerteventura</h5>
+                <p class="card-text">Spain</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$1220</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/bri-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Bari</h5>
+                <p class="card-text">Italy</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$914</h5> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/zad-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Zadar</h5>
+                <p class="card-text">Croatia</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$1200</h5>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/lpa-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Las Palmas</h5>
+                <p class="card-text">Spain</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$1240</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/cta-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Catania</h5>
+                <p class="card-text">Italy</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$914</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card flight-card">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/offers/destination/bds-square.jpg.transform/lh-dcep-transform-width-1440/img.jpg" class="card-img-top" alt="Flight Image">
+              <div class="card-body">
+                <h5 class="card-title">Brindisi</h5>
+                <p class="card-text">Italy</p>
+                <p class="card-text">To Round trip from</p>
+                <h5>$1040</h5>
+              </div>
+            </div>
+          </div>
+      
+    </div>
+  </div>
+</div>
+<br><br>
+<!--Footer-->
+<footer class="bg-dark text-light py-4">
+  <div class="container-fluid">
+  <div class="container-fluid" style="margin-top: 40px;">
+    <div class="row">
+      <div class="col-md-3">
+          <i class="fas fa-globe"></i> CA-EN
+        <br><br>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter search term">
+          </div>
+          
+        </form>
+      </div>
+      <div class="col-md-3">
+        <h5>Frequently visited pages</h5>
+        <ul class="list-unstyled">
+          <li>View & amend flights</li>
+          <li>Offers & destinations</li>
+          <li>Baggage</li>
+          <li>Check-in</li>
+          <li>At the airport</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Travel briefing</h5>
+        <ul class="list-unstyled">
+          <li>Customer services</li>
+          <li>Travel ID Account</li>
+          <li>Miles & More</li>
+          <li>Help & Contact</li>
+          <li>Feedback</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Newsletter</h5>
+        <ul class="list-unstyled">
+          <li>Accessible travel</li>
+          <li>Lufthansa Group</li>
+          <li>Jobs & careers</li>
+          <li>Aviation Group</li>
+          <li>Lufthansa Group Airlines</li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+  </div>
+</footer>
+
+
+<script src="index.js"></script>
+
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
+  

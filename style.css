@@ -1,0 +1,258 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  color: #05164d;
+  margin: 0, auto;
+}
+
+/* Hero Image */
+.hero-image {
+    background-image: url('https://www.lufthansa.com/content/dam/lh/images/local_images/homepage/stage-teasers/goldengate-flight-manager.png.transform/lh-dcep-transform-width-1440/img.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+  }
+  /*Navbar*/
+ 
+.navbar {
+  padding-top: 20px; 
+  padding-bottom: 30px; 
+ }
+
+.navbar-nav .nav-link {
+  font-weight: 400;
+  font-size: 18px; 
+  margin-right: 15px;
+}
+
+.navbar-collapse {
+  float: right;
+ padding: 30px;
+}
+.navbar-dark .navbar-nav .nav-link{
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #dcdcdc !important;
+}
+
+
+/* Form */
+.booking-container {
+  position: relative;
+  top: -150px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+/*btn-primary*/
+
+.btn-primary{
+  background-color:#ffad00 !important;
+  font-size: 1rem;
+  font-weight: 700;
+  width:180px; 
+  height: 45px; 
+  border: none;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: #ffbd32 !important;
+}
+
+.btn-block {
+  background-color:#ffad00 !important;
+  color: #05164d;
+  font-size: 1 rem;
+  font-weight: 700;
+  margin-top: 25px;
+  height: 45px;
+ 
+
+}
+.btn-block:hover {
+  background-color: #ffbd32 !important;
+}
+
+.btn-secondary {
+ color: #333;
+
+}
+
+h4{
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+h1{
+  color: #05164d;
+}
+  /* Cards */
+  .card {
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Footer */
+footer {
+  background-color: #05164d !important;
+  color: #fff;
+}
+
+footer h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+footer ul {
+  color: #dcdcdc;
+  font-size: 1rem;
+}
+
+  .bg-dark {
+    background-color: #05164d !important;
+
+    }
+  
+  /* Footer Links */
+  .list-unstyled li {
+    padding: 5px 0;
+  }
+  
+  .list-unstyled a {
+    color: #fff;
+  }
+  
+  /* Responsive Dropdown Menu */
+  @media (max-width: 576px) {
+    .list-unstyled {
+      margin-top: 20px;
+    }
+  }
+  
+
+/*button*/
+  .btn-link-no-underline {
+    color: #09243f; 
+    text-decoration: none; 
+  }
+  .btn-link-no-underline:focus,
+  .btn-link-no-underline:hover,
+  .btn-link-no-underline:active,
+  .btn-link-no-underline:visited {
+    text-decoration: none; 
+  }
+
+  .transparent-btn {
+    background-color: transparent !important;
+    border: none;
+    padding: 0;
+  }
+  .transparent-btn:hover {
+    border: none;
+  }
+  
+  /* Horizontal Line */
+  .dropdown-item-hr {
+    border-top: 1px solid #000000; 
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  
+  .icon-text {
+    color: #333;
+    margin-right: 12px; 
+  }
+  
+  
+
+@media (max-width: 768px) {
+    .my-form {
+        width: 100%;
+        position: relative;
+        margin-left: 0;
+        transform: translateX(0);
+    }
+}
+
+.custom-img {
+  background-image: url('images/flight.jpg');
+  background-size: cover;
+  background-position: center;
+ 
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%; 
+  z-index: -1; 
+}
+
+.main-content {
+  padding-top: 100px; 
+  padding-bottom: 100px; 
+}
+
+.icon-text {
+  margin-right: 12px; 
+}
+
+.btn-link-no-underline{
+  color: #05164d !important;
+}
+
+
+
+.item-container {
+ 
+  flex-direction: column;
+ 
+}
+.progress-container {
+  display: none;
+}
+.progress-bar {
+  background-color: #000000; 
+}
+
+
+.datepicker {
+ margin-top: 60px;
+}
+
+
+/*progress bar*/
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #05164d;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 100%;
+}

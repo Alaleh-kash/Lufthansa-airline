@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lufthansa</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+  <link rel="stylesheet" href="login.css">
+
+</head>
+<body>
+ 
+  <!--NAVBAR-->
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand mr-auto" href="index.html">
+      <img src="https://www.lufthansa.com/etc/designs/dcep/lh-logo-crane-typo.svg" alt="Lufthansa Logo" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login & Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discover.html">Discover Lufthansa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checkin.html">Check-in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html"><i></i> My Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-globe"></i> CA-EN </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<p style="margin-left: 40px; margin-top: 200px;">
+  <a href="index.html" style="text-decoration: none;">&lt; Home</a>
+</p>
+  <div class="container mt-5">
+  
+    <div class="row justify-content-center">
+     
+      <div class="col-md-7">
+        <div class="card"  style="height: 500px; margin-top: 50px;">
+          <div class="card-header">
+            <h1>Login</h1>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="inputServiceCard"><strong>Please enter your service card number or Travel ID (email address).</strong></label>
+                <input style="height: 55px;" type="text" class="form-control" id="inputServiceCard" placeholder="Enter your service card number or Travel ID">
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-8">
+                    <button type="button" class="btn btn-warning btn-block custom-btn-width"><strong>Next</strong></button>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="mt-4">
+              <a href="#" style="text-decoration: none;"><strong> your PIN or password?</strong></a>
+            </div>
+            <div class="mt-4">
+              <p>If you do not yet have a Miles & More service card number or Travel ID,</p>
+              <p><a href="#" style="text-decoration: none;"><strong> → Register for Travel ID</strong> </a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+<!--Footer-->
+<footer class="bg-dark text-light py-4">
+  <div class="container-fluid">
+  <div class="container-fluid" style="margin-top: 40px;">
+    <div class="row">
+      <div class="col-md-3">
+          <i class="fas fa-globe"></i> CA-EN
+        <br><br>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter search term">
+          </div>
+          
+        </form>
+      </div>
+      <div class="col-md-3">
+        <h5>Frequently visited pages</h5>
+        <ul class="list-unstyled">
+          <li>View & amend flights</li>
+          <li>Offers & destinations</li>
+          <li>Baggage</li>
+          <li>Check-in</li>
+          <li>At the airport</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Travel briefing</h5>
+        <ul class="list-unstyled">
+          <li>Customer services</li>
+          <li>Travel ID Account</li>
+          <li>Miles & More</li>
+          <li>Help & Contact</li>
+          <li>Feedback</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Newsletter</h5>
+        <ul class="list-unstyled">
+          <li>Accessible travel</li>
+          <li>Lufthansa Group</li>
+          <li>Jobs & careers</li>
+          <li>Aviation Group</li>
+          <li>Lufthansa Group Airlines</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  </div>
+</footer>
+
+  <script>
+    $(document).ready(function(){
+      $(".nav-link").on("click", function(){
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

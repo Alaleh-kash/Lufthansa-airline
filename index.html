@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lufthansa</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <!-- For calendar -->
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+
+  <!-- Bootstrap Datepicker CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<!--NAVBAR-->
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand mr-auto" href="index.html">
+      <img src="https://www.lufthansa.com/etc/designs/dcep/lh-logo-crane-typo.svg" alt="Lufthansa Logo" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html"><i class="fas fa-user"></i> Login & Registration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="discover.html">Discover Lufthansa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="checkin.html">Check-in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.html"><i></i> My Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-globe"></i> CA-EN </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<!--Hero Image-->
+  <img src="https://www.lufthansa.com/content/dam/lh/images/local_images/homepage/stage-teasers/goldengate-flight-manager.png.transform/lh-dcep-transform-width-1440/img.jpg"
+       class="img-fluid mx-auto d-block" alt="Airplane image" style="width: 95%; margin-top: 90px;">
+
+<!-- Form Container -->
+<div class="container" style="width: 100%; margin-top: 30px;">
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
+      <div class="booking-container p-4">
+        <!-- Tab Links -->
+        <ul class="list-inline d-flex">
+          <li class="list-inline-item mr-4">
+            <div class="item-container">
+              <i class="fa fa-plane icon-text"></i>
+              <a href="#" class="tab-links" style="color: #05164d; text-decoration: none;" onmouseover="opentab(event, 'flights')" onmouseout="hideTabLine(this)">Flights</a>
+            </div>
+          </li>
+          <li class="list-inline-item mr-4">
+            <div class="item-container">
+              <i class="fa fa-car icon-text"></i>
+              <a href="#" class="tab-links" style="color: #05164d; text-decoration: none;" onmouseover="opentab(event, 'rental-car')" onmouseout="hideTabLine(this)">Rental Car</a>
+            </div>
+          </li>
+          <li class="list-inline-item">
+            <div class="item-container">
+              <i class="fa fa-hotel icon-text"></i>
+              <a href="#" class="tab-links" style="color: #05164d; text-decoration: none;" onmouseover="opentab(event, 'hotel')" onmouseout="hideTabLine(this)">Hotel</a>
+            </div>
+          </li>
+        </ul>
+                
+                <div class="col-md-12 mt-3">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <select class="form-control transparent-btn" style="background-color: #414e63 important!; color: #52627c;">
+                        <option>One way</option>
+                        <option>Multi-City</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <select class="form-control transparent-btn" style="background-color: #414e63 important!; color: #52627c;">
+                        <option>Economy, 1 traveller</option>
+                        <option>Business</option>
+                      </select>
+                    </div>
+                    <br>
+                    <div class="col-md-3">
+                
+                      <div class="form-check transparent-btn mt-2">
+                        <input class="form-check-input" type="checkbox" value="" id="nonstopOnly" style="margin-left: 4px;">
+                        <label class="form-check-label" for="nonstopOnly" style="color: #52627c;; margin-left: 25px;" >
+                          Nonstop only
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="container mt-3">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <label for="from">
+                        <i></i> From:
+                      </label>
+                      <input type="text" class="form-control" id="from" placeholder="Enter origin">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="to">
+                        <i></i> To:
+                      </label>
+                      <input type="text" class="form-control" id="to" placeholder="Enter destination">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="departure">
+                        <i class="fa fa-calendar fa-lg icon-text" id="calendar-icon"></i> Departure - Return:
+                      </label>
+                      <input type="text" class="form-control" id="departure" placeholder="Select dates">
+                    </div>
+                    
+                    <div class="col-md-3">
+                      <button type="button" class="btn btn-light btn-block">
+                        <a href="discover.html" class="btn-link-no-underline">Search Flights</a></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<br>
+ <br>
+ <div class="container-fluid" style="margin-top:-150px">
+  <div class="row justify-content-center"> 
+    <!-- First Column -->
+    <div class="col-md-2 offset-md-*"> 
+      <div class="dropdown">
+        <button class="btn btn-secondary transparent-btn" type="button" id="checkinDropdown1" style="width: 170px;">
+          <i class="fas fa-clock icon-text"></i><strong class="icon-text">Check-in </strong><i class="fas fa-plus btn-icon icon-text"></i>
+          <hr class="dropdown-item-hr">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="checkinDropdown1">
+          <a class="dropdown-item" href="#">Booking code or ticket no.
+            <hr></a>
+          <a class="dropdown-item" href="#">First name (as per booking)
+            <hr></a>
+          <a class="dropdown-item" href="#">Last name (as per booking)
+            <hr></a>
+        </div>
+      </div>
+    </div>
+    <!-- Second Column -->
+    <div class="col-md-2">
+      <div class="dropdown">
+        <button class="btn btn-secondary transparent-btn" type="button" id="checkinDropdown2" style="width: 170px;">
+          <i class="fas fa-plane-departure icon-text"></i><strong class="icon-text">Flight Status</strong><i class="fas fa-plus btn-icon icon-text"></i>
+          <hr class="dropdown-item-hr">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="checkinDropdown2">
+          <a class="dropdown-item" href="#">Flight Tracker <hr></a>
+          <a class="dropdown-item" href="#">Arrivals <hr></a>
+          <a class="dropdown-item" href="#">Departures <hr></a>
+        </div>
+      </div>
+    </div>
+    <!-- Third Column -->
+    <div class="col-md-2">
+      <div class="dropdown">
+        <button class="btn btn-secondary transparent-btn" type="button" id="checkinDropdown3" style="width: 170px;">
+          <i class="fas fa-book icon-text"></i><strong class="icon-text">My Bookings</strong><i class="fas fa-plus btn-icon icon-text"></i>
+          <hr class="dropdown-item-hr">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="checkinDropdown3">
+          <a class="dropdown-item" href="#">View Bookings <hr></a>
+          <a class="dropdown-item" href="#">Modify Bookings <hr></a>
+          <a class="dropdown-item" href="#">Cancel Bookings <hr></a>
+        </div>
+      </div>
+    </div>
+    <!-- Fourth Column -->
+    <div class="col-md-2">
+      <div class="dropdown">
+        <button class="btn btn-secondary transparent-btn" type="button" id="checkinDropdown4" style="width: 170px;">
+          <i class="fas fa-gift icon-text"></i><strong class="icon-text"> Miles & More</strong><i class="fas fa-plus btn-icon icon-text"></i>
+          <hr class="dropdown-item-hr">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="checkinDropdown4">
+          <a class="dropdown-item" href="#">Log in with your Miles & More login data.<hr></a>
+          <a class="dropdown-item" href="#">Your benefits with Miles & More: <hr></a>
+          <a class="dropdown-item" href="#">Register<hr></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="container"style="margin-top: 60px;">
+  <div class="row">
+      <!-- First column -->
+      <div class="col-md-6">
+          <div class="card text-white">
+            <a href="discover.html">
+              <img src="https://www.lufthansa.com/content/dam/lh/images/pixels_variations/c-123794498-7780593.jpg.transform/lh-dcep-transform-width-1440/img.jpg"
+               class="card-img img-fluid rounded float-start grow-image" alt="..." style="height: 280px;">
+            </a>
+              <div class="card-img-overlay">
+                  <h5 class="card-title"><a href="discover.html" style="text-decoration: none; color: white;">Attractive offers</a></h5>
+                  <h3 class="card-text"><a href="discover.html" style="text-decoration: none; color: white;">Find destination</a></h3>
+              </div>
+          </div>
+      </div>
+      <!-- Second column -->
+      <div class="col-md-6">
+          <div class="card bg-dark text-white mb-3">
+            <a href="help.html">
+              <img src="https://www.lufthansa.com/content/dam/lh/icons/irreg-teaser-assets/lh_stage-teaser_travel-briefing_1440x617.png.transform/lh-dcep-transform-width-1440/img.jpg"
+               class="card-img img-fluid rounded float-start grow-image" alt="..."  style="height: 280px;">
+            </a>
+              <div class="card-img-overlay">
+                  <h5 class="card-title"><a href="help.html" style="text-decoration: none; color: black;">Travel briefing</a></h5>
+                  <h3 class="card-text"><a href="help.html" style="text-decoration: none; color: black;">A guide for your trip</a></h3>   
+              </div>
+          </div>
+      </div>
+  </div>
+</div>   
+<!--cart2-->
+
+<div class="album py-5 bg-body-tertiary" >    
+    <div class="container">
+        <h3 style="margin-top: 0px; margin-bottom: 20px;">Discover further topics</h3><br><br>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card shadow-sm">
+                   <img src="https://www.lufthansa.com/content/dam/lh/images/local_variations/c-869551282-lh_yes_favorites_00a_header.jpg.transform/lh-dcep-transform-width-1440/img.jpg" alt="">
+                    <div class="card-body">
+                      <h5 class="card-text" style="font-size: 1.3rem; font-weight:700; color: #05164d;">Yes to new favorites!</h5>
+                      <p>New moments of pleasure on your long-haul flight in Business Class.</p>
+                      <br>
+                      <div class="d-flex justify-content-between align-items-center">
+                        
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    <div class="col-md-3">
+      <div class="card shadow-sm">
+        <img src="https://www.lufthansa.com/content/dam/lh/images/local_images/homepage/lh-cash-and-miles-promo.jpg.transform/lh-dcep-transform-width-1440/img.jpg" alt="">
+    <div class="card-body">
+      <h5 class="card-text" style="font-size: 1.3rem; font-weight:700; color: #05164d;">Cash & Miles</h5>
+      <p>Book dream destinations now, and enjoy a mileage saving of up to 40%.</p>
+      <br>
+      <div class="d-flex justify-content-between align-items-center">
+        
+      </div>
+    </div>
+  </div>
+    </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+        <img src="https://www.lufthansa.com/content/dam/lh/images/pixels_variations/c-1537430396-120412.transform/lh-dcep-transform-width-1440/img.jpg" alt="">
+    <div class="card-body">
+      <h5 class="card-text" style="font-size: 1.3rem; font-weight:700; color: #05164d;">Lufthansa in Canada</h5>
+        <p>All about our offices, Corporate Program, Trade fairs, the German National Tourist Office and more.</p>
+      <div class="d-flex justify-content-between align-items-center">
+       
+      </div>
+    </div>
+  </div>
+    </div>
+      <div class="col-md-3">
+          <div class="card shadow-sm">
+            <img src="https://www.lufthansa.com/content/dam/lh/images/promos/lh_promo-europcar_teaser_1440x617.png.transform/lh-dcep-transform-width-1440/img.jpg" alt="">
+              <div class="card-body">
+                <h5 class="card-text" style="font-size: 1.3rem; font-weight:700; color: #05164d;">Benefits at Europcar</h5>
+                  <p>Get up to 20% discount on your car rental with Europcar in April!</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      </div>
+                    </div>
+                    <br>
+                </div>
+             </div>
+          <br>
+<!-- Four Buttons -->
+
+<div class="container mt-5 text-center">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <button class="btn btn-light btn-lg transparent-btn">
+              <i class="fas fa-car btn-icon"></i> <strong style="font-weight:700; color: #05164d;">Your rental car</strong>
+
+                <p class="mt-3" style="font-size: 16px; color: #05164d">As a Lufthansa customer, enjoy exclusive benefits with our partners.</p>
+            </button>
+        </div>
+        <div class="col-md-3 mb-3">
+            <button class="btn btn-light btn-lg transparent-btn">
+                <i class="fas fa-plus btn-icon"></i></i> <strong style=" font-weight:700; color: #05164d;"> Additional services</strong>
+                <p class="mt-3" style="font-size: 16px; color: #05164d">Make your journey even more comfortable with our additional services.</p>
+            </button>
+        </div>
+        <div class="col-md-3 mb-3">
+            <button class="btn btn-light btn-lg transparent-btn">
+                <i class="fas fa-hotel btn-icon"></i></i> <strong style=" font-weight:700; color: #05164d;">Your hotel from Booking.com</strong> 
+                <p class="mt-3" style="font-size: 16px; color: #05164d">Our hotel partner offers you a range of accommodation worldwide at the best price.</p>
+            </button>
+        </div>
+        <div class="col-md-3 mb-3">
+          <button class="btn btn-light btn-lg transparent-btn">
+              <i class="fas fa-plane btn-icon"></i> </i> <strong style=" font-weight:700; color: #05164d;">Flight & hotel</strong>
+              <p class="mt-3" style="font-size: 16px; color: #05164d"> Book your dream holiday on Lufthansa Holidays.</p>
+          </button>
+      </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container" style="margin-top: 30px;">
+    <!--<div class="row">
+      <div class="col-md-12 text-center">-->
+        <button type="button" class="btn btn-primary">
+            <a href="discover.html" class="btn-link-no-underline">More Offers</a>
+        </button>
+    </div>
+    </div>
+
+<br><br><br>
+<div class="container" style="margin-top: 30px;"></div>
+<p style="color: #05164d;font-weight: 700;font-size: 1.3rem;">Offset the CO₂ emissions of your flight</p>
+</div>
+</div>
+
+<!--icons-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12"> 
+      <h4 style="margin-bottom: 20px;">Payment options:</h4>
+      <a href="#"><i class="fab fa-cc-mastercard icon-text" style="color: #ffb509; font-size: 24px;"></i></a>
+      <a href="#"><i class="fab fa-cc-amex icon-text" style="color: #0076a8; font-size: 24px;"></i></a> 
+      <a href="#"><i class="fab fa-cc-visa icon-text" style="color: #eb001b; font-size: 24px;"></i></a> 
+      <a href="#"><i class="fab fa-apple-pay icon-text" style="color: #000000; font-size: 24px;"></i></a> 
+      <a href="#"><i class="fas fa-plane-departure icon-text" style="color: #ff6600; font-size: 24px;"></i></a> 
+    </div> 
+    <div class="col-md-6 col-sm-12" style="margin-top: 20px;"> 
+      <h4 style="margin-bottom: 20px;">Follow us:</h4>
+      <a href="#"><i class="fab fa-facebook icon-text" style="color: #3b5998; font-size: 24px;"></i></a>
+      <a href="#"><i class="fab fa-twitter icon-text" style="color: #1da1f2; font-size: 24px;"></i></a>
+      <a href="#"><i class="fab fa-instagram icon-text" style="color: #e4405f; font-size: 24px;"></i></a>
+    </div>
+  </div>   
+</div>
+
+<br><br>
+
+<!--Footer-->
+<footer class="bg-dark text-light py-4">
+  <div class="container-fluid">
+  <div class="container-fluid" style="margin-top: 40px;">
+    <div class="row">
+      <div class="col-md-3">
+          <i class="fas fa-globe"></i> CA-EN
+        <br><br>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter search term">
+          </div>
+          
+        </form>
+      </div>
+      <div class="col-md-3">
+        <h3>Frequently visited pages</h3>
+        <ul class="list-unstyled">
+          <li>View & amend flights</li>
+          <li>Offers & destinations</li>
+          <li>Baggage</li>
+          <li><a href="index3.html">Check-in</a></li>
+          <li>At the airport</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h3>Travel briefing</h3>
+        <ul class="list-unstyled">
+          <li>Customer services</li>
+          <li>Travel ID Account</li>
+          <li>Miles & More</li>
+          <li>Help & Contact</li>
+          <li>Feedback</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h3>Newsletter</h3>
+        <ul class="list-unstyled">
+          <li>Accessible travel</li>
+          <li>Lufthansa Group</li>
+          <li>Jobs & careers</li>
+          <li>Aviation Group</li>
+          <li>Lufthansa Group Airlines</li>
+        </ul>
+      </div>
+    </div> 
+  </div>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap Datepicker js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+</body>
+</html>
