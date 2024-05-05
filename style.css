@@ -237,9 +237,9 @@ footer ul {
 /*progress bar*/
 
 .tab-links {
-  margin-right: 50px;
+  margin-right: 20px;
   font-size: 18px;
-  /*font-weight: bold;*/
+ 
   cursor: pointer;
   position: relative;
 }
